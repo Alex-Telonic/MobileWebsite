@@ -1,0 +1,85 @@
+
+body {
+  min-height:100vh;
+  font-size: 16px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+#output {
+	margin-top: 20px;
+}
+
+#debug {
+	color: black;
+}
+
+#counter_value {
+	font-size: 100vw;
+	color: black;
+}
+
+#OnlyMobile {
+	margin-top: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/*#output, #cleanValues {
+	font-size: 10vw;
+}
+
+#intro {
+	font-size: 2em;
+}*/
+
+
+
+
+/*#beta, #beta_clean {
+	background-color: #80ff80;
+}
+
+#gamma {
+	background-color: #80b3ff;
+}*/
+/*
+#start-button {
+	background-color: white;
+	color: black;
+}
+#stop-button {
+	background-color: red;
+}*/
+
+
+
+#main {
+	background-color: white;
+}
+
+#footer {
+	background-color: white;
+}
+
+#counter {
+	color: black;
+	font-size: 30px;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
