@@ -2,9 +2,9 @@
 
 
 // function sayHello(event) {
-// 	console.log(event);
-// 	var name = document.getElementById("text").value;
-// 	document.getElementById("output").innerHTML = "<h2>" + "Hello " + name + "</h2>";
+//  console.log(event);
+//  var name = document.getElementById("text").value;
+//  document.getElementById("output").innerHTML = "<h2>" + "Hello " + name + "</h2>";
 // }
 
 // document.querySelector("button").addEventListener("click", sayHello);
@@ -121,20 +121,20 @@ var situpboolean2 = false;
 //   y = y.toFixed(0);
 //   y = Math.abs(y);
 //   if (situpboolean == false) { 
-//   	if (x >= 60) {
-//   	counter++;
-//   	situpboolean = true;
+//    if (x >= 60) {
+//    counter++;
+//    situpboolean = true;
 
 //   }
-//   	else if (y >= 60) {
-//   		counter++;
-//   		situpboolean2 = true;
-//   	}
+//    else if (y >= 60) {
+//      counter++;
+//      situpboolean2 = true;
+//    }
 
 // }
 //   else { 
-//   	if (x <= 10 ) {
-//   	situpboolean = false;
+//    if (x <= 10 ) {
+//    situpboolean = false;
 //   }
 
 // }
@@ -177,10 +177,16 @@ gn.init().then(function(){
       if (x >= 60) {
         counter++;
         situpboolean = true;
+        if (window.navigator && window.navigator.vibrate) {
+            navigator.vibrate(200);
+        }
       }
       else if (y >= 50) {
       counter++;
       situpboolean2 = true;
+        if (window.navigator && window.navigator.vibrate) {
+            navigator.vibrate(200);
+        }
       }
 
     }
@@ -205,25 +211,25 @@ gn.init().then(function(){
 
 
     // Process:
-    // data.do.alpha	( deviceorientation event alpha value )
-    // data.do.beta		( deviceorientation event beta value )
-    // data.do.gamma	( deviceorientation event gamma value )
-    // data.do.absolute	( deviceorientation event absolute value )
+    // data.do.alpha  ( deviceorientation event alpha value )
+    // data.do.beta   ( deviceorientation event beta value )
+    // data.do.gamma  ( deviceorientation event gamma value )
+    // data.do.absolute ( deviceorientation event absolute value )
 
-    // data.dm.x		( devicemotion event acceleration x value )
-    // data.dm.y		( devicemotion event acceleration y value )
-    // data.dm.z		( devicemotion event acceleration z value )
+    // data.dm.x    ( devicemotion event acceleration x value )
+    // data.dm.y    ( devicemotion event acceleration y value )
+    // data.dm.z    ( devicemotion event acceleration z value )
 
-    // data.dm.gx		( devicemotion event accelerationIncludingGravity x value )
-    // data.dm.gy		( devicemotion event accelerationIncludingGravity y value )
-    // data.dm.gz		( devicemotion event accelerationIncludingGravity z value )
+    // data.dm.gx   ( devicemotion event accelerationIncludingGravity x value )
+    // data.dm.gy   ( devicemotion event accelerationIncludingGravity y value )
+    // data.dm.gz   ( devicemotion event accelerationIncludingGravity z value )
 
-    // data.dm.alpha	( devicemotion event rotationRate alpha value )
-    // data.dm.beta		( devicemotion event rotationRate beta value )
-    // data.dm.gamma	( devicemotion event rotationRate gamma value )
+    // data.dm.alpha  ( devicemotion event rotationRate alpha value )
+    // data.dm.beta   ( devicemotion event rotationRate beta value )
+    // data.dm.gamma  ( devicemotion event rotationRate gamma value )
   });
 }).catch(function(e){
-	console.log("Not supported");
+  console.log("Not supported");
   // Catch if the DeviceOrientation or DeviceMotion is not supported by the browser or device
 });
 

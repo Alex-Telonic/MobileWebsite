@@ -19,6 +19,19 @@ body {
 	color: black;
 }
 
+@media (orientation: landscape) {
+
+	#counter_value {
+	font-size: 10vw;
+	color: black;
+	}
+
+	#counter {
+		font-size: 5vw;
+	}	
+}
+
+
 #OnlyMobile {
 	margin-top: 50px;
 	font-size: 20px;
