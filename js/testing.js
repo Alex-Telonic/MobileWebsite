@@ -58,12 +58,14 @@ function start() {
           situpboolean = true;
           if (window.navigator && window.navigator.vibrate) {
             navigator.vibrate(200);//vibrate
+            PlaySound("sound1");
           }
         } else if (y >= 50) { //or wait until gamma is higher than 50 degrees, in the case it is in landscape modus
           counter++;
           situpbooleanLandscape = true;
           if (window.navigator && window.navigator.vibrate) {
             navigator.vibrate(200);//vibrate
+            PlaySound("sound1");
           }
         }
       //go back to original position i.e. lie down, to trigger new situps
@@ -136,4 +138,9 @@ function closeFullscreen() {
   } else if (document.msExitFullscreen) { /* IE/Edge */
     document.msExitFullscreen();
   }
+}
+
+function PlaySound(soundObj) {
+  var sound = document.getElementById(soundObj);
+  sound.Play();
 }
