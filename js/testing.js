@@ -4,10 +4,12 @@ var x = 0;
 var y = 0;
 var debug_boolean = false;
 var elem = document.documentElement;
+var started_boolean = false;
 
 //Stopp recording Situps
 function stop() {
-  gn.stop(); 
+  gn.stop();
+  started_boolean = false;
   console.log("gn stopped");
   counter = 0;
   $("#counter_value").text(counter); //reset counter to zero
@@ -37,7 +39,9 @@ function start() {
   var situpboolean = false;
   var situpbooleanLandscape = false;
 
-  //start reading gyrosscope data
+  if (started_boolean == false) {
+    started_boolean == true;
+      //start reading gyrosscope data
   gn.init().then(function() {
     gn.start(function(data) {
       var tempValue = $("#counter_value").text();
@@ -111,6 +115,8 @@ function start() {
     console.log("Not supported");
     // Catch if the DeviceOrientation or DeviceMotion is not supported by the browser or device
   });
+  }
+
 
 
 }
