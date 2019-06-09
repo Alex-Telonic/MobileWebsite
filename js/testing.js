@@ -40,7 +40,9 @@ function start() {
   var situpbooleanLandscape = false;
 
   if (started_boolean == false) {
-    started_boolean == true;
+    console.log("Started" + started_boolean)
+    started_boolean = true;
+
       //start reading gyrosscope data
   gn.init().then(function() {
     gn.start(function(data) {
